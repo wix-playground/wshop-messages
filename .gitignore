@@ -16,5 +16,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+bin/Exponent-2.4.6.app
 
 .*swp
