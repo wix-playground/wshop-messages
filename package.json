@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-native-scripts": "1.13.1",
+    "detox": "^7.3.3",
+    "detox-expo-helpers": "^0.2.0",
     "jest-expo": "26.0.0",
+    "mocha": "^5.1.1",
+    "react-native-scripts": "1.13.1",
     "react-test-renderer": "16.3.0-alpha.1"
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
@@ -13,7 +16,8 @@
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
-    "test": "jest"
+    "test": "jest",
+    "e2e": "detox test --configuration ios.sim --debug-synchronization 2000"
   },
   "jest": {
     "preset": "jest-expo"
@@ -22,6 +26,15 @@
     "expo": "^26.0.0",
     "react": "16.3.0-alpha.1",
     "react-native": "0.54.3",
-    "wix-chat-workshop-server": "^1.0.1"
+    "wix-chat-workshop-server": "^1.0.2"
+  },
+  "detox": {
+    "configurations": {
+      "ios.sim": {
+        "binaryPath": "bin/Exponent-2.4.6.app",
+        "type": "ios.simulator",
+        "name": "iPhone 7"
+      }
+    }
   }
 }

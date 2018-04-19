@@ -9,7 +9,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <View testID="welcome" style={styles.container}>
         <Text>Init screen of chat client app!</Text>
       </View>
     );
